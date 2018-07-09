@@ -5,6 +5,12 @@ import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { ApolloLink } from 'apollo-link';
 
+const prod = process.env.NODE_ENV === 'production'
+
+const BACKEND_URL = prod
+  ? 'https://phoenix-nrg-api.herokuapp.com/'
+  : 'http://localhost:4000'
+
 const Client = new ApolloClient({
   connectToDevTools: process.browser,
   ssrMode: !process.browser,
@@ -20,7 +26,7 @@ const Client = new ApolloClient({
       return null;
     }),
     new HttpLink({
-      uri: 'http://localhost:4000/graphql',
+      uri: BACKEND_URL,
       fetch: fetch,
       ops: {
         credentials: 'same-origin'
