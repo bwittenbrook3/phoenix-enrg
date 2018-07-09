@@ -1,2 +1,3 @@
 api=https://github.com/HashNuke/heroku-buildpack-elixir
 web=https://github.com/heroku/heroku-buildpack-nodejs#v121
+https://github.com/heroku/heroku-buildpack-nginx
