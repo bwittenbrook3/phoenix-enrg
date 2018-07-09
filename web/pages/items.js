@@ -14,7 +14,7 @@ const query = gql`
 export default () => (
   <div>
     <Nav />
-    <h1>Items are listed below...</h1>
+    <h1 className="title">Items are listed below...</h1>
     <Query query={query}>
       {({ loading, error, data }) => {
         if (loading) return <p>Loading...</p>;
@@ -26,5 +26,10 @@ export default () => (
         ));
       }}
     </Query>
+    <style jsx>{`
+      .title {
+        font-size: 40px;
+      }
+    `}</style>
   </div>
 )

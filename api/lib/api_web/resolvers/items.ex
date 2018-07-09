@@ -3,7 +3,8 @@ defmodule ApiWeb.Resolvers.Items do
   # Example data
   @items %{
     "foo" => %{id: "foo", name: "Foo"},
-    "bar" => %{id: "bar", name: "Bar"}
+    "bar" => %{id: "bar", name: "Bar"},
+    "buzz" => %{id: "buzz", name: "Buzz"}
   }
 
   def find_item(_parent, %{id: id}, _resolution) do

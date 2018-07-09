@@ -3,11 +3,13 @@ import React from 'react'
 import client from '../utils/apollo-client'
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 
+const prod = process.env.NODE_ENV === 'production'
+
 export default class CustomApp extends App {
   static async getInitialProps({Component, pageProps}) {
 
     let apolloState = {};
-    if (!process.browser) {
+    if (!process.browser && prod) {
       // Run all graphql queries
       const app = (
         <ApolloProvider client={client}>
