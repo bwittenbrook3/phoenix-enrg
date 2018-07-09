@@ -1,2 +1,2 @@
-api: cd api && mix phx.server
-frontend: cd frontend && yarn dev
+api: cd api && MIX_ENV=prod mix phx.server
+frontend: cd frontend && yarn start --env=production
