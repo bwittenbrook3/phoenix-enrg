@@ -8,7 +8,7 @@ import { ApolloLink } from 'apollo-link';
 const prod = process.env.NODE_ENV === 'production'
 
 const BACKEND_URL = prod
-  ? 'https://phoenix-nrg-api.herokuapp.com/'
+  ? 'https://phoenix-nrg-api.herokuapp.com'
   : 'http://localhost:4000'
 
 const Client = new ApolloClient({
