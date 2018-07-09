@@ -1,2 +1,2 @@
 api: cd api && mix phx.server
-web: cd web && /app/bin/start-nginx yarn start --env=production
+web: /app/bin/start-nginx sh -c "cd web && yarn start --env=production"
