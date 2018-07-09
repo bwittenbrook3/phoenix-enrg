@@ -1,2 +1,2 @@
-api=https://github.com/HashNuke/heroku-buildpack-elixir#v3
+api=https://github.com/HashNuke/heroku-buildpack-elixir
 frontend= https://github.com/heroku/heroku-buildpack-nodejs#v121
