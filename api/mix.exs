@@ -43,7 +43,8 @@ defmodule Api.Mixfile do
       {:absinthe_plug, "~> 1.4.0"},
       {:absinthe_ecto, "~> 0.1.3"},
       {:poison, "~> 3.1.0"},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 1.5"},
+      {:distillery, "~> 1.5", runtime: false}
     ]
   end
 
