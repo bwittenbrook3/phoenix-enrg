@@ -1,8 +1,8 @@
 use Mix.Config
 
 config :api, ApiWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
-  url: [host: "localhost", port: {:system, "PORT"}],
+  http: [port: 4000],
+  url: [host: "localhost", port: 4000],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   root: ".",

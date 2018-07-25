@@ -1,0 +1,3 @@
+api: /app/api/bin/api foreground
+web: cd web && npm start
+nginx: nginx
