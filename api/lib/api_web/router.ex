@@ -11,7 +11,7 @@ defmodule ApiWeb.Router do
     forward "/graphiql", Absinthe.Plug.GraphiQL,
       schema: ApiWeb.Schema
 
-    forward "/graphql", Absinthe.Plug,
+    forward "/", Absinthe.Plug,
       schema: ApiWeb.Schema
   end
 

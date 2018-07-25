@@ -64,7 +64,6 @@ COPY entrypoint.sh ./
 
 # setup nginx
 RUN mkdir -p /run/nginx
-RUN mkdir -p /var/tmp/nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # setup the api application

@@ -8,8 +8,8 @@ import { ApolloLink } from 'apollo-link';
 const prod = process.env.NODE_ENV === 'production'
 
 const BACKEND_URL = prod
-  ? 'https://phoenix-nrg-api.herokuapp.com/graphql'
-  : 'http://localhost:4000/graphql'
+  ? 'https://phoenix-enrg.herokuapp.com/api'
+  : 'http://localhost:4000/api'
 
 const Client = new ApolloClient({
   connectToDevTools: process.browser,
