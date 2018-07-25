@@ -8,8 +8,19 @@ export default () => (
     <Nav />
 
     <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">To get started, edit <code>pages/index.js</code> and save to reload.</p>
+      <div className="logos">
+        <img className="phx" src="/static/phoenix-icon.png" />
+        <span>+</span>
+        <img src="/static/elixir.png" />
+        <span>+</span>
+        <img src="/static/nextjs.png" />
+        <span>+</span>
+        <img src="/static/react.png" />
+        <span>+</span>
+        <img className="graphql" src="/static/graphql.png" />
+      </div>
+      <h1 className="title">Phoenix-ENRG</h1>
+      <p className="description">Isomorphic applications of the 21st century.</p>
 
       <div className="row">
         <Link href="https://github.com/zeit/next.js#getting-started">
@@ -36,6 +47,25 @@ export default () => (
     </div>
 
     <style jsx>{`
+      .logos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logos span {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      .logos img{
+        height: 150px;
+      }
+      .logos img.phx {
+        padding-right: 50px;
+      }
+      .logos img.graphql {
+        padding-left: 30px;
+        height: 120px;
+      }
       .hero {
         width: 100%;
         color: #333;
