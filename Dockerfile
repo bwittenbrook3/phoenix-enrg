@@ -47,7 +47,7 @@ FROM elixir:1.6.6-alpine
 RUN apk add --update \
     bash \
     git \
-    nginx \    
+    nginx \
     nodejs \
     nodejs-npm
 
@@ -64,6 +64,7 @@ COPY entrypoint.sh ./
 
 # setup nginx
 RUN mkdir -p /run/nginx
+RUN mkdir -p /var/tmp/nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # setup the api application
