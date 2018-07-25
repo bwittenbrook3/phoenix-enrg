@@ -19,16 +19,30 @@ export default () => (
       {({ loading, error, data }) => {
         if (loading) return <p>Loading...</p>;
         if (error) return <p>Error :()</p>;
-        return data.items.map(({ id, name }) => (
-          <div key={id}>
-            <p>{`${id}: ${name}`}</p>
-          </div>
-        ));
+        return <div className="items">
+          {
+            data.items.map(({ id, name }) => (
+              <div key={id}>
+                <p>{`${id}: ${name}`}</p>
+              </div>
+            ))
+          }
+        </div>
       }}
     </Query>
     <style jsx>{`
+      .items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .items div {
+        display: block;
+      }
       .title {
         font-size: 40px;
+        text-align: center;
       }
     `}</style>
   </div>
