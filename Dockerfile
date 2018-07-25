@@ -45,10 +45,11 @@ RUN yarn build
 FROM elixir:1.6.6-alpine
 
 RUN apk add --update \
-    nodejs \
     bash \
     git \
-    nginx
+    nginx \    
+    nodejs \
+    nodejs-npm
 
 RUN  npm install -g foreman
 
