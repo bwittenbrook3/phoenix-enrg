@@ -52,10 +52,11 @@ export default () => (
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      .logos span {
-        font-size: 50px;
-        font-weight: bold;
+                
+        span {
+          font-size: 50px;
+          font-weight: bold;
+        }
       }
       .logos img{
         height: 150px;
